@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" cotent="width=device-width, initial-scale=1.0">
+        <title>Lockox Login Webpage</title>
+        <script>
+         function validate(){
+            var password=document.getElementsByid("pass").value;
+             var username=document.getElementsByid("Uname").value;
+             if(username== "pelumi" && password== "abcde"){
+             return true;
+             }else{
+             return false;
+  }
+}     </script>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                min-height: 100vh ;
+                background:  #eee;
+                display: flex;
+                font-family: sans-serif;
+            }
+            .container{
+                margin: auto;
+                width: 500px;
+                max-width: 100%;
+            }
+            .container form{
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                background: rgb(248, 247, 247);
+                border-radius: 4px;
+                box-shadow:0 8px 16px rgba(0, 0, 0, .3);
+            }
+            .container form h1{
+                text-align: center;
+                margin-bottom: 24px;
+                color: #222 ;
+            }
+            .container form .form-control{
+                width: 100%;
+                height: 40px;
+                background: rgb(252, 251, 251);
+                border-radius: 4px;
+                border: 1px solid rgb(46, 153, 10) ;
+                margin: 10px 0 18px 0;
+                padding: 0 12px;
+            }
+            .container form .btn{
+                margin-left: 35%;
+                transform: translateX();
+                width: 130px;
+                height: 35px;
+                cursor: pointer;
+                background: black;
+                color: white;
+            }
+            .container form .btn:hover{
+                opacity: .7;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form class="myForm" action="static/welcome.html">
+                <h1> Lockox Login</h1>
+                <div class="form-group">
+                    <label for="">Username:</label>
+                    <input type="username:" name="Uname" id="Uname" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="">Password:</label>
+                    <input type="password" name="Pass" id="Pass" class="form-control" required>
+                </div>
+                <input type="submit" class="btn" value="Login" onclick=validate()>
+            </form>
+        </div>
+    </body>    
+</html>
